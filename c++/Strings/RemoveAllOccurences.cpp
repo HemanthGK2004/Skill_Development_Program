@@ -3,6 +3,7 @@
 #include<string>
 
 using namespace std;
+<<<<<<< HEAD
 class Solution {
 public:
     string removeOccurrences(string s, string part) {
@@ -12,7 +13,6 @@ public:
         return s;
     }
 };
-
 int main() {
     Solution solution;
     string s = "daabcbaabcbc";

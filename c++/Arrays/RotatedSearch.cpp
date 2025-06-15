@@ -23,8 +23,6 @@ class Solution {
                 } else {
                     left = mid + 1; // Search in the right half
                 }
-            }
-            
             else { // Right half is sorted
                 if (nums[mid] < target && target <= nums[right]) {
                     left = mid + 1; // Search in the right half

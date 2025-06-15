@@ -23,8 +23,8 @@ class Solution {
         return -1; // Target not found
     }
 };
-int main()
-{
+int main() {
+
     Solution solution;
     vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // Example sorted array
     int target = 9; // Example target

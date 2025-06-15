@@ -4,12 +4,10 @@ using namespace std;
 
 class Solution {
     public:
-    // Function to count the number of 1 bits in an integer
-    int hammingWeight(int n)
-    {
-        int count = 0;
-        while(n > 0)
-        {
+    // Function to count the number of 1 bits in an intege
+    int hammingWeight(int n){
+        int count =0;
+        while(n >0){
             count += (n & 1);
             n >>= 1; // Right shift n by 1
         }
