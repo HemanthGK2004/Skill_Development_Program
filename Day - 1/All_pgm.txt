@@ -1,0 +1,10 @@
+structure
+container
+Store
+
+Input:for c language--> scanf()
+Output:for c language-->printf()
+
+Input for c++ language--> cin
+Output for c++ language--> cout
+
