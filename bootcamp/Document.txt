@@ -1,0 +1,6 @@
+Set is a predefined dataset presente by java.util package
+
+
+JDK 1.2
+Comparator is used for sorting and comparing in ascending order or descending order
+Comparable is an abstract method syntax public int(element e)
