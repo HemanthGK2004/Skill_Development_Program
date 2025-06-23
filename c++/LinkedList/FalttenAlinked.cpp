@@ -13,7 +13,6 @@ class Solution {
 public:
     Node* flatten(Node* root) {
         if (!root || !root->next) return root;
-
         // Recursively flatten the next list
         root->next = flatten(root->next);
 
@@ -25,9 +24,7 @@ private:
     Node* mergeTwoLists(Node* a, Node* b) {
         if (!a) return b;
         if (!b) return a;
-
         Node* result;
-
         if (a->data < b->data) {
             result = a;
             result->bottom = mergeTwoLists(a->bottom, b);
@@ -35,7 +32,6 @@ private:
             result = b;
             result->bottom = mergeTwoLists(a, b->bottom);
         }
-
         result->next = nullptr; // Remove next pointer in the final flattened list
         return result;
     }

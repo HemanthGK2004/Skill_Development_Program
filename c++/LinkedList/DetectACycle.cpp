@@ -15,20 +15,14 @@ public:
         Node* slow = head;
         Node* fast = head;
         
-        while (fast != nullptr && fast->next != nullptr) {
+        while (fast && fast->next) {
             slow = slow->next;          // Move slow by 1 step
             fast = fast->next->next;   // Move fast by 2 steps
             if (slow == fast) {
                 return true; // Cycle detected
             }
         }
-        return false; // No cycle
-        slow = head;
-        while (slow->next != fast->next) {
-            slow = slow->next; // Move slow by 1 step
-            fast = fast->next; // Move fast by 1 step
-        }
-        return slow; // Return the node where the cycle starts
+        return false; // No cyc/ Return the node where the cycle starts
     }
 };
 

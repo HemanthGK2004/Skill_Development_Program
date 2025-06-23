@@ -31,7 +31,6 @@ public:
             current->next = new Node(sum % 10);
             current = current->next;
         }
-
         return dummy->next; // Return the next node to skip the dummy head
     }
 };
