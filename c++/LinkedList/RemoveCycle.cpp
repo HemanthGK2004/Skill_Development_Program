@@ -30,7 +30,7 @@ class Solution {
         if(slow==fast){
             slow=head;
             if(slow==fast){
-                 while(fast->next!=slow){
+                while(fast->next!=slow){
                     fast=fast->next;
                 }
                 fast->next=nullptr;

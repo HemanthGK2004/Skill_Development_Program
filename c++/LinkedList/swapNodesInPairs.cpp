@@ -11,8 +11,6 @@ struct Node {
         next = nextNode;
     }
 };
-
-
 class Solution {
 public:
     Node* swapPairs(Node* head) {

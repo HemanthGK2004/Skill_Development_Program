@@ -13,10 +13,8 @@ class Solution {
 public:
     Node* flatten(Node* root) {
         if (!root || !root->next) return root;
-
         // Recursively flatten the next list
         root->next = flatten(root->next);
-
         // Merge current list with the flattened next list
         return mergeTwoLists(root, root->next);
     }
@@ -35,7 +33,6 @@ private:
             result = b;
             result->bottom = mergeTwoLists(a, b->bottom);
         }
-
         result->next = nullptr; // Remove next pointer in the final flattened list
         return result;
     }

@@ -4,6 +4,8 @@ class Solution {
 public:
     int reverseNumber(int n) {
         int reversed = 0;
+        int INT_MAX = 2147483647; // Maximum value for a 32-bit signed integer
+        int INT_MIN = -2147483648; // Minimum value for a 32-bit signed integer
         while (n!=0) {
             int digit = n % 10; 
             // Get the last digit
