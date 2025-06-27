@@ -1,38 +1,36 @@
+//two unique numbers in an array
+#include <iostream>
 #include <vector>
 using namespace std;
-#include <iostream>
 
 class Solution {
-  public:
-    vector<int> singleNum(vector<int>& arr) {
-        // Code here.
-        int xor_all = 0;
-        for(int num:arr){
-            xor_all^=num;
+public:
+    vector<int> twoUniqueNumbers(vector<int>& nums) {
+        int xorResult = 0;
+        for (int num : nums) {
+            xorResult ^= num; // XOR all numbers
         }
-        int diff_bit = xor_all & -xor_all;
-        int x = 0,y=0;
-        for(int num:arr){
-            if(num & diff_bit)
-                x^=num;
-            else
-                y^=num;
+
+        // Find the rightmost set bit in xorResult
+        int rightmostSetBit = xorResult & -xorResult;
+
+        int firstUnique = 0, secondUnique = 0;
+        for (int num : nums) {
+            if (num & rightmostSetBit) {
+                firstUnique ^= num; // First unique number
+            } else {
+                secondUnique ^= num; // Second unique number
+            }
         }
-        if(x<y)return {x,y};
-        return {y,x};
+
+        return {firstUnique, secondUnique}; // Return the two unique numbers
     }
 };
 
 int main() {
     Solution solution;
-    vector<int> arr = {1, 2, 1, 3, 2, 5}; // Example input
-    vector<int> result = solution.singleNum(arr); // Call the function
-    // Output the result
-    for(int num: result) {
-        cout << num << " ";
-    }
-    cout << endl; // Print a newline
+    vector<int> nums = {4, 5, 6, 4, 5, 7}; // Example input
+    vector<int> result = solution.twoUniqueNumbers(nums); // Call the function
+    cout << "Two unique numbers: " << result[0] << ", " << result[1] << endl; // Output the result
     return 0; // Return success
 }
-// This code finds two unique numbers in an array where all other numbers appear twice.
-// It uses XOR to find the unique numbers and prints them in ascending order.

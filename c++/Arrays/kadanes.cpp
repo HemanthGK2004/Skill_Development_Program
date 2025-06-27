@@ -5,6 +5,7 @@ using namespace std;
 class Solution {
     public:
     int maxSubarray(vector<int>& nums) {
+        int INT_MIN = -123456;
         int max_sum = INT_MIN; // Initialize max_sum to the smallest integer
         int current_sum = 0; // Initialize current_sum to 0
 
