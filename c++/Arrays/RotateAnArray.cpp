@@ -15,7 +15,7 @@ public:
         reverse(arr.begin() + d, arr.end()); // Reverse the last d elements
 
         //left rotate the array by d elements
-        reverse(arr.begin(), arr.begin()+d); // Reverse the entire array
+        reverse(arr.begin(), arr.begin()+d); // Reverse the first d elem
         reverse(arr.begin()+d, arr.end()); // Reverse the last n-d elements
         reverse(arr.begin(), arr.end()); // Reverse the entire array again
     }

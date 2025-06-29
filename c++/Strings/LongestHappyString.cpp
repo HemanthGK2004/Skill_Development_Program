@@ -7,7 +7,7 @@ class Solution {
 public:
     string longestPrefixSuffix(string s) {
         int n = s.size();
-        vector<int> lps(n, 0);
+        vector<int>lps(n, 0);
         int j = 0;
 
         for (int i = 1; i < n; i++) {

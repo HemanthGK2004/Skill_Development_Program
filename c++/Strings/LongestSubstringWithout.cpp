@@ -8,15 +8,15 @@ class Solution {
     int lengthOfLongestSubstring(string s){
         unordered_map<char,int>lastSeen;
         int maxLength = 0;
-        int start = 0;
+        int left = 0;
         int n = s.size();
         for(int right =0;right < n;right++){
             char currentChar = s[right];
-            if((lastSeen.find(currentChar) != lastSeen.end()) &&(lastSeen[currentChar] >= start)){
-                start = lastSeen[currentChar] + 1;
+            if((lastSeen.find(currentChar) != lastSeen.end()) &&(lastSeen[currentChar] >= left)){
+                left = lastSeen[currentChar] + 1;
             }
             lastSeen[currentChar] = right;
-            maxLength = max(maxLength, right - start + 1);
+            maxLength = max(maxLength, right - left + 1);
         }
         return maxLength;
     }

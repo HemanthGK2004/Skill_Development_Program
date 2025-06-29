@@ -12,7 +12,8 @@ class Solution{
         reverse(s.begin(), s.end());
         for(int i =0;i<n;i++){
             string word = "";
-            while(i<n && s[i] != ' '){
+            while(i<n && s[i] != ' ')
+            {
                 word += s[i];
                 i++;
             }
