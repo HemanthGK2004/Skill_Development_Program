@@ -8,11 +8,9 @@ class Solution {
         int INT_MIN = -123456;
         int max_sum = INT_MIN; // Initialize max_sum to the smallest integer
         int current_sum = 0; // Initialize current_sum to 0
-
         for (int i = 0; i < nums.size(); i++) {
             current_sum += nums[i]; // Add the current element to current_sum
             max_sum = max(max_sum, current_sum); // Update max_sum if current_sum is greater
-
             if (current_sum < 0) { // If current_sum becomes negative, reset it to 0
                 current_sum = 0;
             }

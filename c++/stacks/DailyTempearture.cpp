@@ -12,7 +12,6 @@ public:
         int n = temperatures.size();
         vector<int> result(n, 0); // Initialize result array with 0
         stack<int> st; // Stack to store indices of temperatures
-
         for (int i = 0; i < n; i++) {
             while (!st.empty() && temperatures[st.top()] < temperatures[i]) {
                 int index = st.top(); // Get the index of the previous temperature
@@ -21,7 +20,6 @@ public:
             }
             st.push(i); // Push current index onto the stack
         }
-
         return result; // Return the result array
     }
 };

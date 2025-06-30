@@ -14,7 +14,7 @@ class Solution{
         Node* fast = head->next;
         
         // Find the middle of the list
-        while (fast && fast->next) {
+        while (fast!=nullptr && fast->next!=nullptr) {
             slow = slow->next;
             fast = fast->next->next;
         }

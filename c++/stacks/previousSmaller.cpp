@@ -11,7 +11,7 @@ public:
         stack<int> st; // Stack to store indices of elements
         for (int i = 0; i < n; i++) {
             // Pop elements from stack while the current element is less than or equal to the element at the index stored at the top of the stack
-            while (!st.empty() && arr[i] <= st.top()) {
+            while (!st.empty() && arr[i] <= arr[st.top()]) {
                 st.pop();
             }
             // If stack is empty, it means no previous smaller element exists

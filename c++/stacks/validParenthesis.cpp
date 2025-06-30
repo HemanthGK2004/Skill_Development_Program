@@ -23,7 +23,7 @@ class Solution {
             if(s[i]== '(' || s[i] == '[' || s[i] == '{') {
                 st.push(s[i]); // Push opening brackets onto the stack
             }else{
-                if(st.empty()||map[st.top()]!= s[i]) {
+                if(st.empty()||map[st.top()]!=s[i]) {
                     return false; // If stack is empty or top doesn't match, return false
                 }
                 st.pop(); // Pop the matching opening bracket from the stack

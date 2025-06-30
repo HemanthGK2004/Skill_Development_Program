@@ -13,7 +13,6 @@ public:
         if (!head) return head; // If the list is empty, return null
 
         Node* current = head;
-        
         while (current->next) {
             if (current->data == current->next->data) {
                 Node* temp = current->next; // Store the next node

@@ -29,7 +29,7 @@ class BST{
             return node; // Return the unchanged node pointer
         }
         void insert(int val) {
-        root = insert(root, val);
+            root = insert(root, val);
         } // Public insert function to start from root
 
         int findMin(Node* node){

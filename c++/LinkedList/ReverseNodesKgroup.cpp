@@ -39,7 +39,6 @@ class Solution {
         if (next) {
             head->next = reverseKGroup(next, k);
         }
-        
         // Return the new head of the reversed group
         return prev;
     }

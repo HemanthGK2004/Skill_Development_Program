@@ -10,7 +10,7 @@ class Solution {
 };
 int main() {
     Solution solution;
-    int n = 15; // Example input
+    int n = 16; // Example input
     int result = solution.powerOf2(n); // Call the function
     cout << "Is " << n << " a power of 2? " << (result ? "Yes" : "No") << endl; // Output the result
     return 0; // Return success

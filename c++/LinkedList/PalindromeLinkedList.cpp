@@ -52,7 +52,6 @@ class Solution {
             firstHalf = firstHalf->next;
             secondHalf = secondHalf->next;
         }
-
         return true; // Is a palindrome
     }
 };

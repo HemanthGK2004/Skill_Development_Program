@@ -17,7 +17,7 @@ public:
         if(!root)return 0;
         int leftDepth = maxDepth(root->left); // Recursively find depth of left subtree
         int rightDepth = maxDepth(root->right); // Recursively find depth of right subtree
-        return max(leftDepth, rightDepth) + 1; // Return the maximum depth of
+        return max(leftDepth, rightDepth) + 1; // Return the maximum depth of the two subtrees plus 1 for the root node
     }
 };
 

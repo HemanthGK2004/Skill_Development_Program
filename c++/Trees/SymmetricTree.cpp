@@ -21,7 +21,6 @@ public:
         // Check if left subtree of t1 is a mirror of right subtree of t2 and vice versa
         return isMirror(t1->left, t2->right) && isMirror(t1->right, t2->left);
     }
-
     bool isSymmetric(Node* root) {
         if(!root) return true;
         return isMirror(root, root);

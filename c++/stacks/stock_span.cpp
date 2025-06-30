@@ -15,7 +15,7 @@ public:
         stack<int> st; // Stack to store indices of prices
         for (int i = 0; i < n; i++) {
             // Pop elements from stack while the current price is greater than or equal to the price at the index stored at the top of the stack
-            while (!st.empty() && prices[i] >= prices[st.top()]) {
+            while (!st.empty() && prices[st.top()]<=prices[i]) {
                 st.pop();
             }
             // If stack is empty, it means all previous prices are less than current price
