@@ -11,8 +11,14 @@ class Solution {
         }
         int maxEle = arr[0], minEle = arr[0];
         for(int num: arr) {
-            maxEle = max(maxEle, num); // Update maximum element
-            minEle = min(minEle, num); // Update minimum element
+            // maxEle = max(maxEle, num); // Update maximum element
+            // minEle = min(minEle, num); // Update minimum element
+            if(num< minEle) {
+                minEle = num; // Update minimum element
+            }
+            if(num > maxEle) {
+                maxEle = num; // Update maximum element
+            }
         }
         return {maxEle, minEle}; // Return pair of maximum and minimum elements
     }

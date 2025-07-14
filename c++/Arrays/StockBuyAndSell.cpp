@@ -7,7 +7,7 @@ class Solution {
     int maximumProfit(vector<int>&prices){
         int maxSum = 0;
         int bestBuy = prices[0];
-        for(int i =1;i<prices.size();i++){
+        for(int i =1; i<prices.size();i++){
             if(prices[i]>maxSum){
                 maxSum = max(maxSum, prices[i]-bestBuy);
             }

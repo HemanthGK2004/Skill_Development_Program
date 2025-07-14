@@ -5,7 +5,8 @@ using namespace std;
 class Solution{
     public:
     void quickSort(vector<int>&arr, int low, int high){
-        if(low<high){
+        if(low<high)
+        {
             int pivot = partition(arr,low,high);
             quickSort(arr,low,pivot-1);
             quickSort(arr,pivot+1,high);

@@ -23,7 +23,7 @@ class Solution{
 };
 int main() {
     Solution solution;
-    vector<int> nums = {1, 3, 4, 2, 2}; // Example input
+    vector<int> nums = {1, 3,4, 4, 2, 2}; // Example input
     int result = solution.duplicateNumber(nums); // Call the function
     cout << "Duplicate number: " << result << endl; // Output the result
     return 0; // Return success

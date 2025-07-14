@@ -9,7 +9,6 @@ class solution{
         int n = arr.size();
         int left = 0, right = n - 1;
         int operations = 0;
-
         while (left < right) {
             if (arr[left] == arr[right]) {
                 left++;

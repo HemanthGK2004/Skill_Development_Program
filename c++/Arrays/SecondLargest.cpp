@@ -14,11 +14,9 @@ int findSecondLargest(const vector<int>& arr) {
             secondLargest = num;
         }
     }
-
     // Check if second largest was found
     if (secondLargest == INT_MIN)
         return -1;  // or throw an error / custom message
-
     return secondLargest;
 }
 

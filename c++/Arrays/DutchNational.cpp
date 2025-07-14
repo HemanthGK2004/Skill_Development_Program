@@ -1,5 +1,4 @@
 #include<iostream>
-
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -9,7 +8,8 @@ class Solution {
         int low = 0;
         int mid = 0;
         int high = arr.size()-1;
-        while(mid<=high){
+        while(mid<=high)
+        {
             if(arr[mid]==0){
                 swap(arr[low],arr[mid]);
                 low++;
